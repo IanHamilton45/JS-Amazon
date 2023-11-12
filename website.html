@@ -1,47 +1,36 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>HTML CSS Review</title>
-    <style>
-      /*
-        This is a comment.
-      */
-      .red-button {
-        background-color: red;
-        color: white;
-        border: none;
-      }
-
-      .yellow-button {
-        background-color: yellow;
-      }
-    </style>
+    <title>Cart Quantity</title>
   </head>
   <body>
-    <!--
-      This is a comment.
-    -->
-    <button title="Good job!" class="red-button" onclick="alert('Good job!');">
-      hello
-    </button>
+    <button onclick="
+      console.log(`Cart quantity: ${cartQuantity}`);
+    ">Show Quantity</button>
 
-    <p>
-      paragraph of <button class="yellow-button">hello</button> text
-    </p>
+    <button onclick="
+      cartQuantity++;
+      console.log(`Cart quantity: ${cartQuantity}`);
+    ">Add to Cart</button>
+
+    <button onclick="
+      cartQuantity += 2;
+      console.log(`Cart quantity: ${cartQuantity}`);
+    ">+2</button>
+
+    <button onclick="
+      cartQuantity = cartQuantity + 3;
+      console.log(`Cart quantity: ${cartQuantity}`);
+    ">+3</button>
+
+    <button onclick="
+      cartQuantity = 0;
+      console.log('Cart was reset.');
+      console.log(`Cart quantity: ${cartQuantity}`);
+    ">Reset Cart</button>
 
     <script>
-      // This is a comment.
-      // This code creates a popup.
-      // alert('hello');
-
-      /*
-        multi
-        line
-        comment
-      */
-
-      console.log(2 + 2);
-      console.log('some' + 'text');
+      let cartQuantity = 0;
     </script>
   </body>
 </html>
